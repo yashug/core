@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@modern-js/utils@2.60.0': 2.60.1-alpha.0
+
 importers:
 
   .:
@@ -980,8 +983,8 @@ importers:
         specifier: 7.24.4
         version: 7.24.4
       '@modern-js/runtime':
-        specifier: 2.60.1-alpha.0
-        version: 2.60.1-alpha.0(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 2.60.1-alpha.5
+        version: 2.60.1-alpha.5(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0)
       '@module-federation/modern-js':
         specifier: workspace:*
         version: link:../../../packages/modernjs
@@ -8859,7 +8862,7 @@ packages:
       '@formily/json-schema': 2.3.2(typescript@5.0.4)
       '@formily/validator': 2.3.2
       '@modern-js/codesmith': 2.3.3
-      '@modern-js/utils': 2.60.0
+      '@modern-js/utils': 2.60.1-alpha.0
       '@swc/helpers': 0.5.1
       inquirer: 8.2.6
     transitivePeerDependencies:
@@ -8869,7 +8872,7 @@ packages:
   /@modern-js/codesmith@2.3.3:
     resolution: {integrity: sha512-KBmkO05++5UB73DvNsoR9EhGMH1Z9jO9bq4nlDREwonc4XE3dJv6ojQlw9B9JRauG+FzNfp+i2cdqn4AWNPBbA==}
     dependencies:
-      '@modern-js/utils': 2.60.0
+      '@modern-js/utils': 2.60.1-alpha.0
       '@swc/helpers': 0.5.1
       axios: 1.7.4
       tar: 6.2.1
@@ -9214,7 +9217,7 @@ packages:
     dependencies:
       '@babel/core': 7.25.2
       '@modern-js/runtime-utils': 2.60.0(react-dom@18.2.0)(react@18.2.0)
-      '@modern-js/utils': 2.60.0
+      '@modern-js/utils': 2.60.1-alpha.0
       '@swc/helpers': 0.5.13
       path-to-regexp: 6.3.0
       react: 18.2.0
@@ -9358,7 +9361,7 @@ packages:
   /@modern-js/plugin@2.60.0:
     resolution: {integrity: sha512-fqHPJl3twwmqmnO4o7JTuZmzUM6v1z8MDAN33N1qJ7oNZlKMWpZKGk9Aqu+ecEe0x+rM7Vr/Spn4O+bvjdDSdw==}
     dependencies:
-      '@modern-js/utils': 2.60.0
+      '@modern-js/utils': 2.60.1-alpha.0
       '@swc/helpers': 0.5.13
     dev: false
 
@@ -9579,7 +9582,7 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@modern-js/utils': 2.60.0
+      '@modern-js/utils': 2.60.1-alpha.0
       '@remix-run/router': 1.15.0
       '@swc/helpers': 0.5.13
       lru-cache: 6.0.0
@@ -9895,8 +9898,8 @@ packages:
       - supports-color
     dev: false
 
-  /@modern-js/runtime@2.60.1-alpha.0(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-2OxLQZD3wZjdMFMQO+nnsn72Zl+nwmpP+dXQmAPM3nId7w0dvWzEuvCn2CtkwhON/zOjrvjdAh9UkZzhXerGbg==}
+  /@modern-js/runtime@2.60.1-alpha.5(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-8RQ6LTs/3fbR5HUOoTSfamuyjinHhe1Y2/CdfyEDZukH7dm09eXv6CtK+x6gYDoLTdIr4qW39ZG1Ilt9TyYv+g==}
     engines: {node: '>=14.17.6'}
     peerDependencies:
       react: '>=17'
@@ -9917,7 +9920,7 @@ packages:
       '@modern-js/plugin-data-loader': 2.60.0(react-dom@18.2.0)(react@18.2.0)
       '@modern-js/runtime-utils': 2.60.0(react-dom@18.2.0)(react@18.2.0)
       '@modern-js/types': 2.60.0
-      '@modern-js/utils': 2.60.0
+      '@modern-js/utils': 2.60.1-alpha.0
       '@swc/helpers': 0.5.13
       '@types/loadable__component': 5.13.9
       '@types/react-helmet': 6.1.11
@@ -11205,16 +11208,16 @@ packages:
       rslog: 1.2.3
     dev: false
 
-  /@modern-js/utils@2.60.0:
-    resolution: {integrity: sha512-5B8ol7ljxgXcE7j1ZYhOmMzONivSBxwWA2/9HXOtl5cqda16O2yUYMwjZK4HbW12BuSc8+W4AT6D6qUyeKxVhA==}
+  /@modern-js/utils@2.60.1:
+    resolution: {integrity: sha512-Xu/xumI2xnkB6BXqHfqD5cDrMhxAW1/QsrHXWHcvEW1hSbtviw77PUwXs90NgPKGtV5wwdA319kUPxswe4TCUA==}
     dependencies:
       '@swc/helpers': 0.5.13
       caniuse-lite: 1.0.30001660
       lodash: 4.17.21
       rslog: 1.2.3
 
-  /@modern-js/utils@2.60.1:
-    resolution: {integrity: sha512-Xu/xumI2xnkB6BXqHfqD5cDrMhxAW1/QsrHXWHcvEW1hSbtviw77PUwXs90NgPKGtV5wwdA319kUPxswe4TCUA==}
+  /@modern-js/utils@2.60.1-alpha.0:
+    resolution: {integrity: sha512-eMf1EuDk4wyrc8sOVyT/y3+vHoJ0p+Of3bmD1Y6C5vrXxn2DgLUZwcDkSGb6ZSmGLO2c5DeCwwz21P4kmQn8kg==}
     dependencies:
       '@swc/helpers': 0.5.13
       caniuse-lite: 1.0.30001660
@@ -17841,7 +17844,7 @@ packages:
       '@mdx-js/loader': 2.3.0(webpack@5.93.0)
       '@mdx-js/mdx': 2.3.0
       '@mdx-js/react': 2.3.0(react@18.3.1)
-      '@modern-js/utils': 2.60.0
+      '@modern-js/utils': 2.60.1-alpha.0
       '@rsbuild/core': 1.0.2
       '@rsbuild/plugin-less': 1.0.1(@rsbuild/core@1.0.2)
       '@rsbuild/plugin-react': 1.0.1(@rsbuild/core@1.0.2)

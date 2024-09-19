@@ -18,12 +18,12 @@ export default defineConfig({
     ssrByRouteIds: ['entry-one_nested-routes/pathname/layout'],
     port: 3062,
   },
-  source: {
-    alias: {
-      // FIXME: becasue modernjs set alias value as package, so the value will use @module-federation/modern-js's @modern-js/runtime , and it will cause multiple instance
-      '@meta/runtime': require.resolve('@modern-js/runtime'),
-    },
-  },
+  // source: {
+  //   alias: {
+  //     // FIXME: becasue modernjs set alias value as package, so the value will use @module-federation/modern-js's @modern-js/runtime , and it will cause multiple instance
+  //     '@meta/runtime': require.resolve('@modern-js/runtime'),
+  //   },
+  // },
   plugins: [
     appTools({
       bundler: 'experimental-rspack',

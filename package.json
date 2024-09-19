@@ -224,5 +224,10 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
+  },
+  "pnpm": {
+    "overrides": {
+      "@modern-js/utils@2.60.0": "2.60.1-alpha.0"
+    }
   }
 }
