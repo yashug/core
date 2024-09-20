@@ -34,10 +34,6 @@ export default ({
   pre: ['@modern-js/plugin-inject-resource'],
   setup(api) {
     const { remotes, name } = runtimeOptions;
-    console.log('server ', dataLoaderRemotes);
-    if (!dataLoaderRemotes.length) {
-      return {};
-    }
     let isHandled = false;
     return {
       prepare() {

@@ -91,8 +91,13 @@ export const moduleFederationDataLoaderPlugin = (
       ssrByRouteIdsMap,
     };
 
+    const hasDataLoaderRemotes = () =>
+      Boolean(serverPluginOptions.dataLoaderRemotes.length);
     return {
       _internalRuntimePlugins: ({ entrypoint, plugins }) => {
+        if (!hasDataLoaderRemotes()) {
+          return { entrypoint, plugins };
+        }
         plugins.push({
           name: 'ssrDataLoader',
           path: '@module-federation/modern-js/data-loader',
@@ -106,6 +111,9 @@ export const moduleFederationDataLoaderPlugin = (
         return { entrypoint, plugins };
       },
       _internalServerPlugins({ plugins }) {
+        if (!hasDataLoaderRemotes()) {
+          return { plugins };
+        }
         plugins.push({
           name: serverPlugin,
           options: serverPluginOptions,
@@ -196,7 +204,6 @@ export const moduleFederationDataLoaderPlugin = (
       },
       async afterDev() {
         clearMFCache();
-        console.log('afterDev', globalThis.__VMOK__);
       },
     };
   },

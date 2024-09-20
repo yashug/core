@@ -19,13 +19,11 @@ export const ssrDataLoaderPlugin = ({
       const remoteRoutesMap: RemoteRoutesMap = {};
       return {
         async beforeRender() {
-          console.log('init ', dataLoaderRemotes);
           if (Object.keys(remoteRoutesMap).length) {
             return;
           }
           const instance = getInstance();
           if (!instance) {
-            console.log('no instance!');
             return;
           }
           if (!instance.options.remotes.length) {
