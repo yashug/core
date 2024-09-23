@@ -36,9 +36,6 @@ export default ({
     const { remotes, name } = runtimeOptions;
     let isHandled = false;
     return {
-      config(config) {
-        // config.render?.middleware?.push(b)
-      },
       prepare() {
         const { middlewares } = api.useAppContext();
         middlewares.push({
