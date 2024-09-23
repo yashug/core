@@ -1,5 +1,6 @@
 import { fs, normalizeToPosixPath } from '@modern-js/utils';
 import path from 'path';
+import os from 'os';
 import { MF_JSON, ROUTE_ID } from '../../constant';
 import { getRemoteLayoutId } from '../../runtime/dataLoader/utils';
 
@@ -71,7 +72,7 @@ export async function generateRouteFile(options: { appDirectory: string }) {
           `// The ${type} pathname is: ${pathname}`,
           `// The ${type} route id is: ${ROUTE_ID}`,
         ];
-        await fs.writeFile(generatedFilePath, content.join('\n'));
+        await fs.writeFile(generatedFilePath, content.join(os.EOL));
         return generatedFilePath;
       };
 

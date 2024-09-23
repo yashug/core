@@ -36,10 +36,13 @@ export default ({
     const { remotes, name } = runtimeOptions;
     let isHandled = false;
     return {
+      config(config) {
+        // config.render?.middleware?.push(b)
+      },
       prepare() {
         const { middlewares } = api.useAppContext();
         middlewares.push({
-          name: 'MFDataLoaderServerPlugin',
+          name: 'a',
           handler: async (c, next) => {
             const serverManifest = c.get('serverManifest');
             const { loaderBundles, nestedRoutesJson } = serverManifest;
